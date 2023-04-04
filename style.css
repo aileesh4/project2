@@ -134,7 +134,7 @@ section{
 .home{
   min-height: 110vh;
   display: flex;
-  background: url(../images/home.jpg) no-repeat;
+  background: url(home.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   align-items: center;
