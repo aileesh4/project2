@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<script type="module">
+
+
+    import { io } from "https://cdn.socket.io/4.5.4/socket.io.esm.min.js";
+        //Client 
+        
+        //const socket = new WebSocket("ws://localhost:5003");
+    
+        
+        //const socket = io.connect('http://localhost:5003');
+        const socket = io("localhost:5003");
+    
+    
+        socket.on('connect', function(){
+            console.log("Connected");
+            console.log(socket.id)
+            //socket.emit('client-Con', socket.id);
+        })
+    
+    
+        //receive a message from the server
+        socket.on("hello from server", (data) => {
+            console.log(data);
+            return;
+        });
+        
+    
+        
+        //write to servers txt file
+         function write(form){
+            console.log(form);
+    
+
+            //get all form data
+            var Name =form[0].value.trim()
+            var Email = form[1].value.trim()
+            var Message = form[2].value.trim()
+    
+    
+
+            //create array that will house all this data for sending to server
+            var sendRes = [];
+            sendRes.push("M");
+            sendRes.push(Name);
+            sendRes.push(Email);
+            sendRes.push(Message);
+            
+            //send data
+            socket.emit("submited", sendRes)
+  
+        }
+    
+        
+    
+    
+        document.querySelector("form")
+            .addEventListener("submit", () => {write(document.querySelector("form"))});
+    
+        // var button = document.getElementById("Button")
+        // button.onClick = deposit(this);
+    
+    </script>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Store</title>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+    
+    <header class="header">
+
+      <a href="#" class="logo"> <i class="fas fa-bag-shopping"></i> store </a>
+
+      <nav class="navbar">
+          <a href="index.html">Home</a>
+          <a href="shirts.html">Shirts</a>
+          <a href="pants">Pants</a>
+          <a href="contact.html">Shoes</a>
+      </nav>
+
+  </header>
+
+  <body>
+    <!-- <section class="home" id="home">
+         -->
+         <section class="forms" id="forms">
+            <h2>Contact Us</h2>
+            <br>
+            <br>
+
+            <form id = "form" onsubmit="event.preventDefault()">
+
+
+                <label for="name">Name:</label>
+                <br>
+                <input type="text" id="name" >
+                <br>
+                <br>
+
+                <label for="Email">Email:</label>
+                <br>
+                <input type="text" id="Email">
+                <br>
+                <br>
+
+                <label for="Message">Message:</label>
+                <br>
+                <input type="text" id="Message">
+                <br>
+                <br>
+                
+
+                <br>
+                <br>
+
+                <input id = "submitcontact" type="submit" value="Submit">
+
+              </form>
+    </section>
+<!-- </section> -->
+  </body>
+
+  <!-- <script>
+
+    const http = require('http')
+
+
+
+    window.addEventListener("load",function(){
+    //Run function when you submit form
+    document.getElementById("formRating").addEventListener("submit",function(e){
+        //Stop the form from submitting:
+        e.preventDefault();
+
+        //Get your input value
+        var email = document.getElementById("email").value;
+        var product = document.getElementById("product").value;
+        var review = document.getElementById("review").value;
+        var rating = document.getElementById("rating").value;
+
+        http.
+
+
+    });
+    });
+
+
+
+  </script> -->
+</html>
