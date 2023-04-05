@@ -1,18 +1,48 @@
-Type: R
+Type: M
 Name: Joel
 Email: test@gmail.com
-Message: Here is the message
+Message: Here is message
 
 
-Type: R
+Type: M
 Name: Joel
 Email: test@gmail.com
-Message: Here is the message
+Message: Here is message
 
 
-Type: R
+Type: M
 Name: Joel
 Email: test@gmail.com
-Message: Here is the message
+Message: Here is message
+
+
+Type: M
+Name: Joel
+Email: test@gmail.com
+Message: Here is message
+
+
+Type: M
+Name: Joel
+Email: test@gmail.com
+Message: Here is message
+
+
+Type: M
+Name: Joel
+Email: test@gmail.com
+Message: Here is message
+
+
+Type: M
+Name: Joel
+Email: test@gmail.com
+Message: Here is message
+
+
+Type: M
+Name: Joel
+Email: test@gmail.com
+Message: Here is message
 
 
