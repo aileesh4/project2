@@ -4,45 +4,5 @@ Email: test@gmail.com
 Message: Here is message
 
 
-Type: M
-Name: Joel
-Email: test@gmail.com
-Message: Here is message
-
-
-Type: M
-Name: Joel
-Email: test@gmail.com
-Message: Here is message
-
-
-Type: M
-Name: Joel
-Email: test@gmail.com
-Message: Here is message
-
-
-Type: M
-Name: Joel
-Email: test@gmail.com
-Message: Here is message
-
-
-Type: M
-Name: Joel
-Email: test@gmail.com
-Message: Here is message
-
-
-Type: M
-Name: Joel
-Email: test@gmail.com
-Message: Here is message
-
-
-Type: M
-Name: Joel
-Email: test@gmail.com
-Message: Here is message
 
 
